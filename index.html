@@ -8,11 +8,7 @@
       content="Molo: Rideshare, Courier Service, Food Deliveries, and Corporate Transport. Corporate Transport Excellence with reliable, safe, and professional services."
     />
     <title>Molo - Rideshare, Delivery & Corporate Transport</title>
-    <link
-      rel="icon"
-      href="https://placehold.co/32x32/E5E7EB/1F2937/svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="icon/icon.png" type="icon/icon.png" />
     <link rel="preload" href="styles.css" as="style" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -21,25 +17,25 @@
 
     <header id="top" class="site-header" role="banner" aria-label="Primary">
       <div class="container header-inner">
-        <a href="#hero" class="logo" aria-label="Molo Home">Molo</a>
-
+        <img src="icon/icon.png" alt="Molo Logo" class="logo-icon" />
         <nav class="site-nav" aria-label="Main navigation">
           <ul class="nav-list">
             <li><a href="#hero">Home</a></li>
-            <li><a href="#hero" aria-label="Ride service selector">Ride</a></li>
-            <li>
-              <a href="#hero" aria-label="Delivery service selector">Deliver</a>
-            </li>
-            <li><a href="#hero" aria-label="Dine service selector">Dine</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#corporate">Business</a></li>
             <li><a href="#safety">Safety</a></li>
-            <li><a href="#download">Download</a></li>
+            <li>
+              <a
+                href="https://github.com/Mocca-flames/molo-download/releases/download/v1.0.0/Molo.apk"
+                >Download</a
+              >
+            </li>
           </ul>
         </nav>
 
         <div class="header-ctas">
           <a
-            href="#download"
+            href="https://github.com/Mocca-flames/molo-download/releases/download/v1.0.0/Molo.apk"
             class="btn btn-primary"
             aria-label="Download Molo App"
             >Download App</a
@@ -71,7 +67,7 @@
         </div>
         <nav class="mobile-menu-nav" aria-label="Mobile navigation">
           <a
-            href="#download"
+            href="https://github.com/Mocca-flames/molo-download/releases/download/v1.0.0/Molo.apk"
             class="btn btn-primary"
             aria-label="Download Molo App"
             >Download App</a
@@ -88,253 +84,310 @@
             Ride, deliver, dine, and corporate transport – all in one app.
           </p>
 
-          <div
-            class="service-selector"
-            role="tablist"
-            aria-label="Service selection"
-          >
-            <button
-              role="tab"
-              aria-selected="true"
-              aria-controls="panel-ride"
-              id="tab-ride"
+          <div class="hero-content">
+            <div
+              class="service-selector"
+              role="tablist"
+              aria-label="Service selection"
             >
-              Ride
-            </button>
-            <button
-              role="tab"
-              aria-selected="false"
-              aria-controls="panel-deliver"
-              id="tab-deliver"
-            >
-              Deliver
-            </button>
-            <button
-              role="tab"
-              aria-selected="false"
-              aria-controls="panel-dine"
-              id="tab-dine"
-            >
-              Dine
-            </button>
-            <button
-              role="tab"
-              aria-selected="false"
-              aria-controls="panel-business"
-              id="tab-business"
-            >
-              Business Events
-            </button>
+              <button
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel-ride"
+                id="tab-ride"
+              >
+                Ride
+              </button>
+              <button
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-deliver"
+                id="tab-deliver"
+              >
+                Deliver
+              </button>
+              <button
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-dine"
+                id="tab-dine"
+              >
+                Dine
+              </button>
+              <button
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-business"
+                id="tab-business"
+              >
+                Business Events
+              </button>
 
-            <div class="tab-panels">
-              <div id="panel-ride" role="tabpanel" aria-labelledby="tab-ride">
-                <form class="service-form">
-                  <div class="form-group">
-                    <label for="ride-pickup">Pickup Location</label>
-                    <input
-                      type="text"
-                      id="ride-pickup"
-                      name="pickup"
-                      placeholder="Enter pickup location"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="ride-destination">Destination</label>
-                    <input
-                      type="text"
-                      id="ride-destination"
-                      name="destination"
-                      placeholder="Enter destination"
-                      required
-                    />
-                  </div>
-                  <button type="submit" class="btn btn-primary service-cta">
-                    Request Ride
-                  </button>
-                </form>
-              </div>
-              <div
-                id="panel-deliver"
-                role="tabpanel"
-                aria-labelledby="tab-deliver"
-                hidden
-              >
-                <form class="service-form">
-                  <div class="form-group">
-                    <label for="deliver-pickup">Pickup Address</label>
-                    <input
-                      type="text"
-                      id="deliver-pickup"
-                      name="pickup"
-                      placeholder="Enter pickup address"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="deliver-delivery">Delivery Address</label>
-                    <input
-                      type="text"
-                      id="deliver-delivery"
-                      name="delivery"
-                      placeholder="Enter delivery address"
-                      required
-                    />
-                  </div>
-                  <button type="submit" class="btn btn-primary service-cta">
-                    Send Package
-                  </button>
-                </form>
-              </div>
-              <div
-                id="panel-dine"
-                role="tabpanel"
-                aria-labelledby="tab-dine"
-                hidden
-              >
-                <form class="service-form">
-                  <div class="form-group">
-                    <label for="dine-address">Your Address</label>
-                    <input
-                      type="text"
-                      id="dine-address"
-                      name="address"
-                      placeholder="Enter your address"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="dine-restaurant">Restaurant/Cuisine</label>
-                    <input
-                      type="text"
-                      id="dine-restaurant"
-                      name="restaurant"
-                      placeholder="Enter restaurant or cuisine"
-                      required
-                    />
-                  </div>
-                  <button type="submit" class="btn btn-primary service-cta">
-                    Order Food
-                  </button>
-                </form>
-              </div>
-              <div
-                id="panel-business"
-                role="tabpanel"
-                aria-labelledby="tab-business"
-                hidden
-              >
-                <form class="service-form">
-                  <div class="form-group">
-                    <label for="business-location">Event Location</label>
-                    <input
-                      type="text"
-                      id="business-location"
-                      name="location"
-                      placeholder="Enter event location"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="business-size">Group Size</label>
-                    <input
-                      type="number"
-                      id="business-size"
-                      name="size"
-                      placeholder="Number of people"
-                      min="1"
-                      required
-                    />
-                  </div>
-                  <button type="submit" class="btn btn-primary service-cta">
-                    Get Quote
-                  </button>
-                </form>
+              <div class="tab-panels">
+                <div id="panel-ride" role="tabpanel" aria-labelledby="tab-ride">
+                  <form class="service-form">
+                    <div class="form-group">
+                      <label for="ride-pickup">Pickup Location</label>
+                      <input
+                        type="text"
+                        id="ride-pickup"
+                        name="pickup"
+                        placeholder="Enter pickup location"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="ride-destination">Destination</label>
+                      <input
+                        type="text"
+                        id="ride-destination"
+                        name="destination"
+                        placeholder="Enter destination"
+                        required
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-primary service-cta">
+                      Request Ride
+                    </button>
+                  </form>
+                </div>
+                <div
+                  id="panel-deliver"
+                  role="tabpanel"
+                  aria-labelledby="tab-deliver"
+                  hidden
+                >
+                  <form class="service-form">
+                    <div class="form-group">
+                      <label for="deliver-pickup">Pickup Address</label>
+                      <input
+                        type="text"
+                        id="deliver-pickup"
+                        name="pickup"
+                        placeholder="Enter pickup address"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="deliver-delivery">Delivery Address</label>
+                      <input
+                        type="text"
+                        id="deliver-delivery"
+                        name="delivery"
+                        placeholder="Enter delivery address"
+                        required
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-primary service-cta">
+                      Send Package
+                    </button>
+                  </form>
+                </div>
+                <div
+                  id="panel-dine"
+                  role="tabpanel"
+                  aria-labelledby="tab-dine"
+                  hidden
+                >
+                  <form class="service-form">
+                    <div class="form-group">
+                      <label for="dine-address">Your Address</label>
+                      <input
+                        type="text"
+                        id="dine-address"
+                        name="address"
+                        placeholder="Enter your address"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="dine-restaurant">Restaurant/Cuisine</label>
+                      <input
+                        type="text"
+                        id="dine-restaurant"
+                        name="restaurant"
+                        placeholder="Enter restaurant or cuisine"
+                        required
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-primary service-cta">
+                      Order Food
+                    </button>
+                  </form>
+                </div>
+                <div
+                  id="panel-business"
+                  role="tabpanel"
+                  aria-labelledby="tab-business"
+                  hidden
+                >
+                  <form class="service-form">
+                    <div class="form-group">
+                      <label for="business-location">Event Location</label>
+                      <input
+                        type="text"
+                        id="business-location"
+                        name="location"
+                        placeholder="Enter event location"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="business-size">Group Size</label>
+                      <input
+                        type="number"
+                        id="business-size"
+                        name="size"
+                        placeholder="Number of people"
+                        min="1"
+                        required
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-primary service-cta">
+                      Request Quote
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
+            <div class="hero-image">
+              <img src="images/profe.jpg" alt="Hero Image" loading="lazy" />
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div class="hero-cta">
-            <a href="#download" class="btn btn-accent">Get the app</a>
+      <section id="rides" class="section rides" aria-labelledby="rides-heading">
+        <div class="container">
+          <h2 id="rides-heading">Quick & Reliable Rides</h2>
+          <div class="corporate-grid">
+            <div class="corporate-visual">
+              <div class="image-container">
+                <img
+                  src="images/corporate.jpg"
+                  alt="Get a ride in minutes with verified drivers"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="corporate-content">
+              <p class="section-subtitle">
+                Get a ride in minutes with trusted and verified drivers.
+              </p>
+              <ul class="feature-list">
+                <li>Instant booking with live driver availability</li>
+                <li>Verified and professional drivers</li>
+                <li>Affordable and transparent pricing</li>
+                <li>Safe and clean vehicles</li>
+                <li>24/7 availability for all your trips</li>
+              </ul>
+              <div class="corporate-stats">
+                <div class="stat-item">
+                  <strong>2M+</strong>
+                  <span>Rides Completed</span>
+                </div>
+                <div class="stat-item">
+                  <strong>4.9★</strong>
+                  <span>Average User Rating</span>
+                </div>
+                <div class="stat-item">
+                  <strong>24/7</strong>
+                  <span>Instant Bookings</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section
-        id="services"
-        class="section services"
-        aria-labelledby="services-heading"
+        id="delivery"
+        class="section delivery"
+        aria-labelledby="delivery-heading"
       >
         <div class="container">
-          <h2 id="services-heading">Everything you need, delivered</h2>
-          <p class="section-subtitle">
-            From rides to corporate events, Molo has you covered.
-          </p>
+          <h2 id="delivery-heading">Fast Package Delivery</h2>
+          <div class="corporate-grid">
+            <div class="corporate-content">
+              <p class="section-subtitle">
+                Send packages anywhere, anytime with real-time tracking.
+              </p>
+              <ul class="feature-list">
+                <li>Door-to-door delivery with live tracking</li>
+                <li>Express same-day delivery available</li>
+                <li>Secure and reliable handling</li>
+                <li>Flexible package sizes</li>
+                <li>Flexible package sizes</li>
+                <li>Affordable and transparent pricing</li>
+              </ul>
+              <div class="corporate-stats">
+                <div class="stat-item">
+                  <strong>500K+</strong>
+                  <span>Packages Delivered</span>
+                </div>
+                <div class="stat-item">
+                  <strong>99.9%</strong>
+                  <span>Delivery Success Rate</span>
+                </div>
+                <div class="stat-item">
+                  <strong>24/7</strong>
+                  <span>Support & Tracking</span>
+                </div>
+              </div>
+            </div>
+            <div class="corporate-visual">
+              <div class="image-container">
+                <img
+                  src="images/delivery.jpg"
+                  alt="Fast package delivery with tracking"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <div class="services-grid" role="list">
-            <article
-              class="service-card"
-              role="listitem"
-              aria-labelledby="svc1-title"
-            >
-              <img
-                src="https://placehold.co/64x64/E5E7EB/1F2937/svg"
-                alt="Rideshare icon"
-                width="64"
-                height="64"
-              />
-              <h3 id="svc1-title">Quick & Reliable Rides</h3>
-              <p>Get a ride in minutes with verified drivers.</p>
-              <a href="#hero" class="btn btn-link">Book a Ride</a>
-            </article>
-
-            <article
-              class="service-card"
-              role="listitem"
-              aria-labelledby="svc2-title"
-            >
-              <img
-                src="https://placehold.co/64x64/E5E7EB/1F2937/svg"
-                alt="Courier icon"
-                width="64"
-                height="64"
-              />
-              <h3 id="svc2-title">Fast Package Delivery</h3>
-              <p>Send packages anywhere, anytime with tracking.</p>
-              <a href="#hero" class="btn btn-link">Send Package</a>
-            </article>
-
-            <article
-              class="service-card"
-              role="listitem"
-              aria-labelledby="svc3-title"
-            >
-              <img
-                src="https://placehold.co/64x64/E5E7EB/1F2937/svg"
-                alt="Food delivery icon"
-                width="64"
-                height="64"
-              />
-              <h3 id="svc3-title">Your Favorite Meals</h3>
-              <p>Delicious food from local restaurants delivered fresh.</p>
-              <a href="#hero" class="btn btn-link">Order Food</a>
-            </article>
-
-            <article
-              class="service-card"
-              role="listitem"
-              aria-labelledby="svc4-title"
-            >
-              <img
-                src="https://placehold.co/64x64/E5E7EB/1F2937/svg"
-                alt="Corporate transport icon"
-                width="64"
-                height="64"
-              />
-              <h3 id="svc4-title">Professional Event Transport</h3>
-              <p>Premium transportation for corporate events and groups.</p>
-              <a href="#corporate" class="btn btn-link">Get Quote</a>
-            </article>
+      <section id="meals" class="section meals" aria-labelledby="meals-heading">
+        <div class="container">
+          <h2 id="meals-heading">Your Favorite Meals</h2>
+          <div class="corporate-grid">
+            <div class="corporate-visual">
+              <div class="image-container">
+                <img
+                  src="images/food.jpg"
+                  alt="Delicious food from local restaurants delivered fresh"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="corporate-content">
+              <p class="section-subtitle">
+                Delicious food from local restaurants delivered fresh to your
+                door.
+              </p>
+              <ul class="feature-list">
+                <li>Wide selection of cuisines and dishes</li>
+                <li>Fresh and hot meals every time</li>
+                <li>Fast delivery within minutes</li>
+                <li>Easy re-order from past favorites</li>
+                <li>Exclusive discounts and promotions</li>
+              </ul>
+              <div class="corporate-stats">
+                <div class="stat-item">
+                  <strong>1M+</strong>
+                  <span>Meals Delivered</span>
+                </div>
+                <div class="stat-item">
+                  <strong>4.8★</strong>
+                  <span>Customer Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                  <strong>30min</strong>
+                  <span>Average Delivery Time</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -345,11 +398,18 @@
         aria-labelledby="corporate-heading"
       >
         <div class="container">
+          <h2 id="corporate-heading">Corporate Transportation Excellence</h2>
           <div class="corporate-grid">
+            <div class="corporate-visual">
+              <div class="image-container">
+                <img
+                  src="images/corporate_main.jpg"
+                  alt="Professional corporate transportation with luxury vehicles and chauffeurs"
+                  loading="lazy"
+                />
+              </div>
+            </div>
             <div class="corporate-content">
-              <h2 id="corporate-heading">
-                Corporate Transportation Excellence
-              </h2>
               <p class="section-subtitle">
                 Professional transport solutions for businesses and events.
               </p>
@@ -377,17 +437,6 @@
                   <span>Dedicated Support</span>
                 </div>
               </div>
-              <a href="#download" class="btn btn-primary corporate-cta"
-                >Get Corporate Quote</a
-              >
-            </div>
-            <div class="corporate-visual">
-              <img
-                src="https://placehold.co/400x300/E5E7EB/1F2937/svg"
-                alt="Professional corporate transportation illustration"
-                width="400"
-                height="300"
-              />
             </div>
           </div>
         </div>
@@ -496,13 +545,6 @@
                   stroke="currentColor"
                   stroke-width="2"
                 />
-                <circle
-                  cx="7"
-                  cy="16"
-                  r="2"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
                 <path
                   d="M7 12V8C7 5.79086 8.79086 4 11 4H13C15.2091 4 17 5.79086 17 8V12"
                   stroke="currentColor"
@@ -534,20 +576,6 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
-                <path
-                  d="M12 9V15"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M9 12H15"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
               </svg>
               <h3>Comprehensive Insurance</h3>
               <p>All services covered by comprehensive insurance policies.</p>
@@ -560,53 +588,23 @@
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
               >
-                <path
-                  d="M12 9V2L13.09 8.26L22 9L13.09 9.74L12 16V9Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
                 <circle
                   cx="12"
-                  cy="21"
-                  r="1"
+                  cy="12"
+                  r="10"
                   stroke="currentColor"
                   stroke-width="2"
                 />
                 <path
-                  d="M16.24 7.76C15.07 6.59 13.54 6 12 6C10.46 6 8.93 6.59 7.76 7.76L12 12L16.24 7.76Z"
+                  d="M12 8V12L14.5 14.5"
                   stroke="currentColor"
                   stroke-width="2"
                   stroke-linecap="round"
-                  stroke-linejoin="round"
                 />
               </svg>
               <h3>Emergency Assistance</h3>
               <p>Quick access to emergency contacts and location sharing.</p>
             </article>
-          </div>
-
-          <div
-            class="safety-stats"
-            role="region"
-            aria-labelledby="safety-stats-heading"
-          >
-            <h3 id="safety-stats-heading" class="sr-only">Safety Statistics</h3>
-            <div class="stats-grid">
-              <div class="stat-item">
-                <strong>1M+</strong>
-                <span>Safe Rides Completed</span>
-              </div>
-              <div class="stat-item">
-                <strong>99.9%</strong>
-                <span>Customer Satisfaction</span>
-              </div>
-              <div class="stat-item">
-                <strong>< 30 sec</strong>
-                <span>Emergency Response</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -622,7 +620,11 @@
             Join thousands who trust us for reliable transportation.
           </p>
           <div class="download-actions">
-            <a href="#" class="btn btn-primary">Download the App</a>
+            <a
+              href="https://github.com/Mocca-flames/molo-download/releases/download/v1.0.0/Molo.apk"
+              class="btn btn-primary"
+              >Download the App</a
+            >
             <a href="#" class="btn btn-accent">Sign Up Online</a>
             <a href="#corporate" class="btn btn-secondary"
               >Get Corporate Quote</a
@@ -648,10 +650,10 @@
         <section class="footer-col" aria-labelledby="footer-services">
           <h3 id="footer-services">Services</h3>
           <ul>
-            <li><a href="#hero">Rideshare</a></li>
-            <li><a href="#hero">Courier Service</a></li>
-            <li><a href="#hero">Food Delivery</a></li>
-            <li><a href="#hero">Corporate Transport</a></li>
+            <li><a href="#rides">Rideshare</a></li>
+            <li><a href="#delivery">Courier Service</a></li>
+            <li><a href="#meals">Food Delivery</a></li>
+            <li><a href="#corporate">Corporate Transport</a></li>
             <li><a href="#">Service Areas</a></li>
           </ul>
         </section>
